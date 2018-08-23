@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9" />
+
+    <TextView
+        android:id="@+id/bytesDownloadedLabel"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="end"
+        android:text="Bytes Downloaded: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/bytesDownloaded"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerView" />
+
+    <TextView
+        android:id="@+id/bytesDownloaded"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="0 KB"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bytesDownloadedLabel"
+        app:layout_constraintTop_toTopOf="@id/bytesDownloadedLabel" />
+
+</android.support.constraint.ConstraintLayout>
